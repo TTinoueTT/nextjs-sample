@@ -1,22 +1,27 @@
+# ************************************************
 # ビルドステージ (build)
-# Node.js 18がインストールされたAlpine Linuxベースのイメージを使用し、
+# ************************************************
+# Node.js 20がインストールされたAlpine Linuxベースのイメージを使用し、
 # このステージをbuildと名付ける
-FROM node:18-alpine AS build
+FROM node:20-alpine AS build
 
 # コンテナ内の作業ディレクトリを/appに設定
 WORKDIR /app
 # package.jsonとpackage-lock.json（存在する場合）をコンテナ内の作業ディレクトリにコピー
 COPY package*.json ./
+RUN npm install -g npm@10.2.5
 # RUN npm ciで依存関係をインストール
-# RUN npm ci
+RUN npm ci
 # Dockerfileがあるディレクトリのすべてのファイルをコンテナ内にコピー
 COPY . .
 # アプリケーションをビルド
-# RUN npm run build
+RUN npm run build
 
+# ************************************************
 # ランタイムステージ (runtime)
-# 同じNode.js 18のAlpineイメージを使用するが、runtimeという新しいステージを開始
-FROM node:18-alpine AS runtime
+# ************************************************
+# 同じNode.js 20のAlpineイメージを使用するが、runtimeという新しいステージを開始
+FROM node:20-alpine AS runtime
 
 WORKDIR /app
 COPY package*.json ./

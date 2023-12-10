@@ -1,20 +1,20 @@
 services:
   app:
+    # env_file: # ビルド時にはこのファイルで指定した環境変数を読み込まない
+    #   - local.env
     build:
       context: .
-    env_file:
-      - ./local.env
     ports:
-      - "${FRONTPORT}:3000"
+      - "${FRONT_PORT}:3000"
     volumes:
       - .:/app
-      - node_modules:/app/node_modules
-    # command: sh -c "npm run dev"
-    networks:
-      - default
-      - snowboard_default #snowboadコンテナのネットワーク名
+      - node_modules:/app/node_modules # node_modules は git管理のため volume でマウント
+    command: sh -c "npm run dev"
+    # networks:
+    #   - default
+    #   - snowboard_default #snowboadコンテナのネットワーク名
 volumes:
   node_modules:
-networks:
-  snowboard_default:
-    external: true
+# networks:
+#   snowboard_default:
+#     external: true
