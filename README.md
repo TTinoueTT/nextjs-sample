@@ -1,3 +1,5 @@
+# README
+
 これは[create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)で初期化された[Next.js](https://nextjs.org/)プロジェクトです。
 
 ## はじめに

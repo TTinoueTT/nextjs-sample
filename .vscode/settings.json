@@ -1,0 +1,50 @@
+{
+    // エディター全般
+    "workbench.settings.useSplitJSON": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.renderWhitespace": "all",
+    "editor.wordWrapColumn": 700,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.minimap.maxColumn": 30,
+    "diffEditor.wordWrap": "off",
+
+    // フォーマッター
+    "[css][scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
+        "editor.formatOnSave": true
+    },
+    "[typescript][javascript][html][typescriptreact][javascriptreact][json][eslintrc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    // "[php]": {
+    //     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    //     "editor.formatOnSave": true
+    // },
+    // "php.validate.executablePath": "./php.sh",
+
+    // スペルチェックを行うファイル形式
+    "cSpell.enabledLanguageIds": ["css", "scss", "tsx", "js", "yml", "xml", "shellscript", "javascript", "typescript", "json", "jsonc", "md"],
+    // 登録した単語
+    "cSpell.words": [
+        // 固有名詞・サービス名
+        "twiiter",
+        "youtuber",
+        // 変数・定数
+
+        // 日本語
+
+        // js・css・ライブラリ
+        "stylesheet",
+        "jquery",
+        "laravel",
+        "autoload"
+        // phpメソッド名
+    ],
+    "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"]
+}
