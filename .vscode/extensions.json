@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "bradlc.vscode-tailwindcss",
+        "zarifprogrammer.tailwind-snippets",
+        "csstools.postcss",
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint"
+    ]
+}
