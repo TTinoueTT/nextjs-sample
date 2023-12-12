@@ -9,6 +9,9 @@
     "editor.wordWrap": "wordWrapColumn",
     "editor.minimap.maxColumn": 30,
     "diffEditor.wordWrap": "off",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
 
     // フォーマッター
     "[css][scss]": {
@@ -17,6 +20,9 @@
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": "explicit"
         }
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
     },
     "emmet.includeLanguages": {
         "postcss": "css"
