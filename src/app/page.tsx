@@ -1,22 +1,67 @@
-import Image from "next/image";
-import AddTask from "./components/AddTask";
-import TodoList from "./components/TodoList";
-import { getAllTodos } from "@/api";
-import { log } from "console";
+"use client";
 
-export default async function Home() {
-    // const todos = await getAllTodos();
-    // console.log(todos);
+import Book from "@/app/components/Book";
 
+// 疑似データ
+const books = [
+    {
+        id: 1,
+        title: "Book 1",
+        thumbnail: "/books/dogramagra.webp",
+        price: 2980,
+        author: {
+            id: 1,
+            name: "Author 1",
+            description: "Author 1 description",
+            profile_icon: "https://source.unsplash.com/random/2",
+        },
+        content: "Content 1",
+        created_at: new Date().toString(),
+        updated_at: new Date().toString(),
+    },
+    {
+        id: 2,
+        title: "Book 2",
+        thumbnail: "/books/leviathan.webp",
+        price: 1980,
+        author: {
+            id: 2,
+            name: "Author 2",
+            description: "Author 2 description",
+            profile_icon: "https://source.unsplash.com/random/3",
+        },
+        content: "Content 2",
+        created_at: new Date().toString(),
+        updated_at: new Date().toString(),
+    },
+    {
+        id: 3,
+        title: "Book 3",
+        price: 4980,
+        thumbnail: "/books/pingpong.webp",
+        author: {
+            id: 3,
+            name: "Author 3",
+            description: "Author 3 description",
+            profile_icon: "https://source.unsplash.com/random/4",
+        },
+        content: "Content 3",
+        created_at: new Date().toString(),
+        updated_at: new Date().toString(),
+    },
+    // 他の本のデータ...
+];
+
+// eslint-disable-next-line @next/next/no-async-client-component
+export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center bg-gray-200 py-2">
-            <h1 className="-mt-32 text-4xl font-bold text-gray-700">Nextjs 13 Todo App</h1>
-            <div className="mt-5 w-full max-w-xl">
-                <div className="w-full rounded-lg bg-white px-8 py-6 shadow-md">
-                    <AddTask />
-                    <TodoList />
-                </div>
-            </div>
-        </main>
+        <>
+            <main className="mt-20 flex flex-wrap items-center justify-center md:mt-32">
+                <h2 className="mb-2 w-full text-center text-3xl font-bold">Book Commerce</h2>
+                {books.map((book) => (
+                    <Book key={book.id} book={book} />
+                ))}
+            </main>
+        </>
     );
 }
