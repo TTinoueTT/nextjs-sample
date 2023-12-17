@@ -18,7 +18,7 @@
         "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit"
+            "source.fixAll.eslint": true
         }
     },
     "files.associations": {
@@ -31,7 +31,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": "explicit"
+            "source.fixAll.eslint": true
         }
     },
     // "[php]": {
@@ -47,6 +47,7 @@
         // 固有名詞・サービス名
         "twiiter",
         "youtuber",
+        "camelcase"
         // 変数・定数
 
         // 日本語
@@ -57,7 +58,7 @@
         "tailwindcss",
         "laravel",
         "autoload"
-        // phpメソッド名
+        // jsメソッド名
     ],
     "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"]
 }
