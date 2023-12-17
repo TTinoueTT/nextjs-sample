@@ -3,24 +3,24 @@ import React from "react";
 const TodoList = () => {
     return (
         <ul className="space-y-3 text-black">
-            <li className="flex justify-between p-4 bg-white border-l-4 border-blue-500 rounded shadow">
+            <li className="flex justify-between rounded border-l-4 border-blue-500 bg-white p-4 shadow">
                 <span className="text-black">散歩</span>
                 <div>
-                    <button className="text-green-400 mr-3">Edit</button>
+                    <button className="mr-3 text-green-400">Edit</button>
                     <button className="text-red-500">Delete</button>
                 </div>
             </li>
-            <li className="flex justify-between p-4 bg-white border-l-4 border-blue-500 rounded shadow">
+            <li className="flex justify-between rounded border-l-4 border-blue-500 bg-white p-4 shadow">
                 <span className="text-black">散歩</span>
                 <div>
-                    <button className="text-green-400 mr-3">Edit</button>
+                    <button className="mr-3 text-green-400">Edit</button>
                     <button className="text-red-500">Delete</button>
                 </div>
             </li>
-            <li className="flex justify-between p-4 bg-white border-l-4 border-blue-500 rounded shadow">
+            <li className="flex justify-between rounded border-l-4 border-blue-500 bg-white p-4 shadow">
                 <span className="text-black">散歩</span>
                 <div>
-                    <button className="text-green-400 mr-3">Edit</button>
+                    <button className="mr-3 text-green-400">Edit</button>
                     <button className="text-red-500">Delete</button>
                 </div>
             </li>
