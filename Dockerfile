@@ -11,7 +11,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install -g npm@10.2.5
 # RUN npm ciで依存関係をインストール
-RUN npm ci
+RUN npm install
 # Dockerfileがあるディレクトリのすべてのファイルをコンテナ内にコピー
 COPY . .
 # アプリケーションをビルド
