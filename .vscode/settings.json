@@ -47,7 +47,7 @@
         // 固有名詞・サービス名
         "twiiter",
         "youtuber",
-        "camelcase"
+        "camelcase",
         // 変数・定数
 
         // 日本語
@@ -60,5 +60,12 @@
         "autoload"
         // jsメソッド名
     ],
-    "cSpell.ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"]
+    "cSpell.ignoreRegExpList": [
+        "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
+    ],
+    "[css][eslintrc][html][javascript][javascriptreact][json][scss][typescript][typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    }
 }

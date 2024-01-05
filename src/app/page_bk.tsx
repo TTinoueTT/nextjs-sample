@@ -1,8 +1,8 @@
-import Image from "next/image";
+// import Image from "next/image";
 import AddTask from "./components/AddTask";
 import TodoList from "./components/TodoList";
-import { getAllTodos } from "@/api";
-import { log } from "console";
+// import { getAllTodos } from "@/api";
+// import { log } from "console";
 
 export default async function Home() {
     // const todos = await getAllTodos();

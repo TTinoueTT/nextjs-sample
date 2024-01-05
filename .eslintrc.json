@@ -9,12 +9,15 @@
         "ecmaVersion": "latest",
         "sourceType": "module" // import module の利用
     },
+    "ignorePatterns": [
+        ".vscode/**"
+    ],
     "rules": {
-        "no-console":"error",
-        "indent":["error", 4],
-        "quotes":["error", "double"],
+        "no-console": "error",
+        "indent": ["error", 4],
+        "quotes": ["error", "double"],
         "semi": ["error", "always"],
-        "no-unused-vars":"warn",
+        "no-unused-vars": "warn",
         "camelcase": "warn"
     },
     "plugins": ["tailwindcss"],
