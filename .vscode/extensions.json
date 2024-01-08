@@ -6,6 +6,8 @@
         "dsznajder.es7-react-js-snippets",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "pranaygp.vscode-css-peek"
+        "pranaygp.vscode-css-peek",
+        "prisma.prisma-insider",
+        "prisma.prisma"
     ]
 }
