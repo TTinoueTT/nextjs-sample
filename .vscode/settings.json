@@ -34,7 +34,10 @@
             "source.fixAll.eslint": true
         }
     },
-    "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" },
+    "[prisma]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
 
     // スペルチェックを行うファイル形式
     "cSpell.enabledLanguageIds": ["css", "scss", "tsx", "js", "yml", "xml", "shellscript", "javascript", "typescript", "json", "jsonc", "md"],
