@@ -4,6 +4,7 @@
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.guides.bracketPairs": true,
     "editor.renderWhitespace": "all",
     "editor.wordWrapColumn": 700,
     "editor.wordWrap": "wordWrapColumn",
@@ -52,6 +53,7 @@
         // 日本語
 
         // js・css・ライブラリ
+        "nextjs",
         "stylesheet",
         "jquery",
         "tailwindcss",

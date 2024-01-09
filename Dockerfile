@@ -9,9 +9,13 @@ FROM node:20-alpine AS build
 WORKDIR /app
 # package.jsonとpackage-lock.json（存在する場合）をコンテナ内の作業ディレクトリにコピー
 COPY package*.json ./
+RUN apk update && apk add --no-cache python3 make g++
+
 RUN npm install -g npm@10.2.5
-# RUN npm ciで依存関係をインストール
+# RUN npm ciで依存関係をインストール、
+# あらかじめローカルで、npm install を実行して、package-lock.json を生成しておく
 RUN npm install
+RUN npx prisma generate
 # Dockerfileがあるディレクトリのすべてのファイルをコンテナ内にコピー
 COPY . .
 # アプリケーションをビルド
@@ -25,8 +29,10 @@ FROM node:20-alpine AS runtime
 
 WORKDIR /app
 COPY package*.json ./
+RUN apk update && apk add --no-cache python3 make g++
 # 本番環境用の依存関係のみをインストール
 RUN npm ci --only=production
+RUN npx prisma generate
 
 # ビルドステージで生成されたファイル（おそらくNext.jsアプリケーションのビルド成果物）
 # をランタイムステージにコピー
